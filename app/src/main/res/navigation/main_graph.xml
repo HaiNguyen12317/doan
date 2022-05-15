@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.hair.myapplication.fragment.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.hair.myapplication.fragment.DetailFragment"
+        android:label="" >
+
+<!--        <argument-->
+<!--            android:name="comics"-->
+<!--            app:argType="com.hair.myapplication.model.Comic"-->
+<!--            app:nullable="true" />-->
+        <action
+            android:id="@+id/action_detailFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.hair.myapplication.fragment.ChatFragment"
+        android:label="ChatFragment" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.hair.myapplication.fragment.FavoriteFragment"
+        android:label="FavoriteFragment" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.hair.myapplication.fragment.SearchFragment"
+        android:label="SearchFragment" />
+</navigation>
